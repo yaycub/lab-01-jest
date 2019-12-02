@@ -4,6 +4,7 @@ const {
   isBoolean,
   isArray,
   isObject,
+  isFunction,
   castToNumber,
   castToString,
   castToBoolean,
