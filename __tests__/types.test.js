@@ -44,6 +44,14 @@ describe('validator module', () => {
       expect(isArray('hi there')).toBeFalsy();
       expect(isArray([1, 2, 3])).toBeTruthy();
     });
+
+    it('properly tells if a value is an object', () => {
+      expect(isObject({})).toBeTruthy();
+      expect(isObject([])).toBeFalsy();
+      expect(isObject(1)).toBeFalsy();
+      expect(isObject('Hey there Danny Saurez')).toBeFalsy();
+      expect(isObject(null)).toBeFalsy();
+    });
   });
 
   describe('casters', () => {
