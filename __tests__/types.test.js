@@ -55,6 +55,15 @@ describe('validator module', () => {
       expect(castToString({})).toEqual('[object Object]');
       expect(castToString([])).toEqual('');
     });
+
+    it('can cast values to a boolean', () => {
+      expect(castToBoolean(5)).toEqual(true);
+      expect(castToBoolean(0)).toEqual(false);
+      expect(castToBoolean([])).toEqual(true);
+      expect(castToBoolean(null)).toEqual(false);
+      expect(castToBoolean('hello')).toEqual(true);
+      expect(castToBoolean({})).toEqual(true);
+    });
   });
 
   it('can get the right caster', () => {
