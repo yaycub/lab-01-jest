@@ -107,6 +107,7 @@ describe('validator module', () => {
     expect(getCaster(Number)).toEqual(castToNumber);
     expect(getCaster(String)).toEqual(castToString);
     expect(getCaster(Boolean)).toEqual(castToBoolean);
+    expect(getCaster(Array)).toEqual(castToArray);
     expect(getCaster(Promise)).toBeNull();
   });
 });
